@@ -19,8 +19,9 @@ router.post("/create", async function(req, res){
 res.status(201).send(createdOwner)
 });
 
-router.get("/", function(req, res){
-  res.send("Hello World");
+router.get("/admin", function(req, res){
+  let success = req.flash("success");
+  res.render("createproducts", {success})
 });
 
 // so yeh route sirf hme development face me chalana hai yeh hm aese krenge
