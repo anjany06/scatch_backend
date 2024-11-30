@@ -7,6 +7,10 @@ const ownersRouter = require("./routes/ownersRouter");
 const usersRouter = require("./routes/usersRouter");
 const productsRouter = require("./routes/productsRouter");
 
+
+// iss line se hamari .env file me jitne bhi variables honge woh sare use me ah jayenge hm unhe use kr payenge
+require("dotenv").config();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
