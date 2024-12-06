@@ -1,3 +1,4 @@
 {
-  "MONGODB_URI": "mongodb://127.0.0.1:27017"
+  "MONGODB_URI": "mongodb+srv://anjanypandey06:ts6ODetsk26HH8Wh@cluster0.f60ev.mongodb.net/scatch?retryWrites=true&w=majority"
+
 }
