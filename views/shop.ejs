@@ -5,8 +5,10 @@
   <span class="inline-block mt-1 mb-1 text-white"> <%= success %> </span>
 </div>
 <% } %>
-<div class="w-full h-screen flex items-start px-20 py-20">
-  <div class="w-[25%] flex h-screen flex-col items-start">
+<div
+  class="w-full h-screen flex flex-col md:flex-row items-start px-4 md:px-20 py-20"
+>
+  <div class="w-full md:w-[25%] flex flex-col items-start mb-10 md:mb-0">
     <div class="flex items-center gap-2">
       <h3>sort by</h3>
       <form action="/shop">
@@ -27,15 +29,15 @@
       <a class="block w-fit mb-2" href="">Discount</a>
     </div>
   </div>
-  <div class="w-[75%] flex flex-col gap-5 h-screen">
-    <div class="flex items-start gap-5">
+  <div class="w-full md:w-[75%] flex flex-col gap-5 h-screen">
+    <div class="flex flex-wrap items-start gap-5">
       <% products.forEach(function(product){ %>
-      <div class="w-60">
+      <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
         <div
           class="w-full h-52 flex items-center justify-center bg-[<%= product.bgcolor %>]"
         >
           <img
-            class="h-[12rem]"
+            class="h-[12rem] object-cover"
             src="data:image/jpeg;base64,<%= product.image.toString('base64') %>"
             alt=""
           />
